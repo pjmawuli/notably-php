@@ -1,0 +1,4 @@
+name: notably
+php: '8.x'
+secured: true
+root: ./public
