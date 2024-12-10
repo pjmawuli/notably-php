@@ -6,6 +6,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 function abort($response_code = Response::NOT_FOUND)
 {
     require base_path("controllers/{$response_code}.php");
+    die();
 }
 
 function routeToControllers($uri, $routes)

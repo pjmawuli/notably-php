@@ -11,10 +11,7 @@ $note = $db->query('select * from notes where id=:id', [
     'id' => $_GET['id']
 ])->findOrFail();
 
-if ($note['user_id'] !== $current_id) {
-    abort(Response::FORBIDDEN);
-    die();
-}
+authorize($note['user_id'] === $current_id);
 
 view('notes/show.view.php', [
     'banner_title' => 'Notes',

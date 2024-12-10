@@ -28,3 +28,10 @@ function urlIs($path)
         return false;
     }
 }
+
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if (!$condition) {
+        abort(Response::FORBIDDEN);
+    }
+}
