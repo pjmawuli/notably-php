@@ -1,5 +1,7 @@
 <?php
 
+use core\Database;
+
 $banner_title = 'Notes';
 
 $config = require base_path('config.php');
