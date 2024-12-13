@@ -10,6 +10,12 @@
         <p class="text-blue-500">
             <?= $note['body'] ?>
         </p>
+        <p>
+        <form method="post" class="mt-7">
+            <input type="hidden" name="id" id="id" value="<?= $note['id'] ?>">
+            <button class="text-sm text-red-500" type="submit">Delete</button>
+        </form>
+        </p>
     </div>
 </main>
 
