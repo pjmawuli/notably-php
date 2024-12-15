@@ -16,4 +16,4 @@
         </a>
     </button>
 </main>
-<?php require 'partials/foot' ?>
+<?php require 'partials/foot.php' ?>

@@ -31,6 +31,12 @@ function urlIs($path)
     }
 }
 
+function abort($response_code = Response::NOT_FOUND)
+{
+    require base_path("controllers/{$response_code}.php");
+    die();
+}
+
 function authorize($condition, $status = Response::FORBIDDEN)
 {
     if (!$condition) {
